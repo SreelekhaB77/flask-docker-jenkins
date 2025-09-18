@@ -11,3 +11,28 @@ flask-docker-jenkins/
 │── Jenkinsfile
 │── README.md
 
+
+⚙️ **Setup & Run Locally**
+
+1️⃣ **Build Docker Image**
+docker build -t flask-docker-jenkins .
+
+2️⃣ **Run Container**
+docker run -d -p 5000:5000 --name flask_app flask-docker-jenkins
+
+3️⃣ **Test Application**
+
+**Open in browser:**
+
+http://localhost:5000
+
+
+🔄 **Jenkins Pipeline**
+
+The Jenkinsfile defines the stages:
+
+Clone Repository → Pulls the latest code from GitHub
+
+Build Docker Image → Builds the Docker image using the Dockerfile
+
+Run Container → Removes old container (if exists) and starts a new one
