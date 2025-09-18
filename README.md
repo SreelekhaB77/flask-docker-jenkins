@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Flask App CI/CD with Docker and Jenkins
 
 This project demonstrates how to containerize a simple Flask application using Docker and automate its build and deployment with Jenkins.
@@ -51,6 +52,7 @@ Run Container
 Removes old container (if exists) and starts a new one.
 
 Jenkinsfile
+'''groovy
 pipeline {
     agent any
 
@@ -75,7 +77,7 @@ pipeline {
                 '''
             }
         }
-    }
+    }'''
 }
 
 🔔 GitHub Webhook Integration
@@ -112,4 +114,6 @@ Add unit tests in pipeline
 Push Docker image to DockerHub
 
 Deploy using Kubernetes or AWS ECS/EKS
+=======
+>>>>>>> b84355b23ae2fa7b0066fdd728de004bfe623e2e
 
