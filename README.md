@@ -14,13 +14,15 @@ flask-docker-jenkins/
 
 ⚙️ **Setup & Run Locally**
 
-1️⃣ **Build Docker Image**
-docker build -t flask-docker-jenkins .
+ 1️⃣ **Build Docker Image**
+ 
+  docker build -t flask-docker-jenkins .
 
-2️⃣ **Run Container**
-docker run -d -p 5000:5000 --name flask_app flask-docker-jenkins
+ 2️⃣ **Run Container**
+ 
+  docker run -d -p 5000:5000 --name flask_app flask-docker-jenkins
 
-3️⃣ **Test Application**
+ 3️⃣ **Test Application**
 
 **Open in browser:**
 
