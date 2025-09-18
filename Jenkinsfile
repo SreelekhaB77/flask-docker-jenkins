@@ -1,10 +1,16 @@
 pipeline {
     agent any
 
+    // Add this block to explicitly use the Git installation configured in Jenkins
+    tools {
+        git 'git version 2.43.0'  // <-- This must match the name in Manage Jenkins → Global Tool Configuration → Git
+    }
+
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/SreelekhaB77/flask-docker-jenkins.git' 
+                // Clone your repo using the specified Git tool
+                git branch: 'main', url: 'https://github.com/SreelekhaB77/flask-docker-jenkins.git'
             }
         }
 
@@ -23,5 +29,10 @@ pipeline {
             }
         }
     }
-}
 
+    post {
+        always {
+            echo 'Pipeline finished!'
+        }
+    }
+}
