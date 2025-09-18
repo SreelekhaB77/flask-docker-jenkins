@@ -1,8 +1,8 @@
-Flask App CI/CD with Docker and Jenkins
+**Flask App CI/CD with Docker and Jenkins**
 
 This project demonstrates how to containerize a simple Flask application using Docker and automate its build and deployment with Jenkins.
 
-🚀 Features
+🚀 **Features**
 
 Flask backend application
 
