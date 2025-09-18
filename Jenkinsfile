@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/SreelekhaB77/flask-docker-jenkins.git'
+                git 'https://github.com/SreelekhaB77/flask-docker-jenkins.git'
             }
         }
 
@@ -16,7 +16,10 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 5000:5000 --name flask_app flask-docker-jenkins'
+                sh '''
+                  docker rm -f flask_app || true
+                  docker run -d -p 5000:5000 --name flask_app flask-docker-jenkins
+                '''
             }
         }
     }
